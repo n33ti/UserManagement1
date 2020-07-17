@@ -60,10 +60,10 @@ namespace UserManagement
 
         public List<User> Users()
         {
-            var context = new DBContextApp();
-
-            dynamic users = context.Users;
+            DBContextApp context = new DBContextApp();
+            var users = context.Users.ToList();
             return users;
+
         }
     }
 }
