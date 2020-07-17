@@ -71,13 +71,13 @@ namespace UserManagement
             Console.WriteLine("--------user added----------");
             userRepo.AddUser(newUser);
 
-            //Console.WriteLine("Enter id to show");
-            //Id = Convert.ToInt32(Console.ReadLine());
-            //user1 = userRepo.GetUser(Id);
-            //if (user1 != null)
-            //    Console.WriteLine(user1.name + " " + user1.address + " " + user1.isActive + " " + user1.Id);
-            //else
-            //    Console.WriteLine("No such user exists");
+            Console.WriteLine("Enter id to show");
+            Id = Convert.ToInt32(Console.ReadLine());
+            user1 = userRepo.GetUser(Id);
+            if (user1 != null)
+                Console.WriteLine(user1.name + " " + user1.address + " " + user1.isActive + " " + user1.Id);
+            else
+                Console.WriteLine("No such user exists");
 
             users = userRepo.Users();
             foreach (var user in users)
